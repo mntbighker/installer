@@ -135,7 +135,7 @@ def download_terraform(version):
 
 
 def config_file(csp, args):
-    with open(os.path.join(csp, "terraform.tfvars.example")) as f:
+    with open(os.path.join(csp, "terraform.tfvars")) as f:
         config = f.read()
 
     if csp == "aws":
