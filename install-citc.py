@@ -61,7 +61,7 @@ def main():
 
     # Create key for admin and provisioning
     if not os.path.isfile("citc-key"):
-        check_call(["ssh-keygen", "-t", "rsa", "-f", "citc-key", "-N", ""])
+        check_call(["ssh-keygen", "-t", "ed25519", "-f", "citc-key", "-N", ""])
 
     # Intialise Terraform
     check_call([terraform, "-chdir={}".format(args.csp), "init"])
